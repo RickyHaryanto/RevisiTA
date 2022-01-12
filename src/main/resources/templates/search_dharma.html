@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../img/icons/favicon.png"/>
+        <title>Maha Vihara</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="fonts/antonio-exotic/stylesheet.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/lightbox.min.css">
+        <link href="css/responsive.css" rel="stylesheet">
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/lightbox-plus-jquery.min.js" type="text/javascript"></script>
+        <script src="js/instafeed.min.js" type="text/javascript"></script>
+        <script src="js/custom.js" type="text/javascript"></script>
+		<link href="js/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+	
+		<style>
+			h3.a{
+			  visibility: hidden;
+			}
+			input.b{
+			  visibility: hidden;
+			}
+			table {
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+
+		th, td {
+		  text-align: left;
+		  padding: 8px;
+		}
+
+		tr:nth-child(even){background-color: #f2f2f2}
+
+		th {
+		  background-color: #04AA6D;
+		  color: white;
+		}
+		
+		input[type=text], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+		input[type=month], select {
+		  width: 80%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+		input[type=time], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+		input[type=number], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+		
+		input[type=file], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+
+		input[type=submit] {
+		  width: 100%;
+		  background-color: #4CAF50;
+		  color: white;
+		  padding: 14px 20px;
+		  margin: 8px 0;
+		  border: none;
+		  border-radius: 4px;
+		  cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+		  background-color: #45a049;
+		}
+
+		.search-container {
+      float: right;
+    }
+    button {
+      
+      padding: 6px 10px;
+     margin-top: -5px;
+      
+      background: #ddd;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
+    .search-container button:hover {
+      background: #ccc;
+    }
+    @media (max-width: 767px) {
+     .nav-tabs {
+         min-width: 100%;
+         display: inline-grid;
+        
+     }
+}
+.nav li a{
+        font-size: medium;
+    }
+		.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.download button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.download a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.download button:hover, a:hover {
+  opacity: 0.7;
+}
+		</style>
+  
+    </head>
+    <body>
+        <div id="page">
+            <!---header top---->
+            <div class="top-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <div class="social-grid">
+                                <ul class="list-unstyled text-right">
+                                    
+									<li><a href="logout.html">Logout</a></li>
+									<p></p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header class="header-container">
+              <div class="container-fluid">
+                  <div class="top-row">
+                      <div class="row">
+                          <div style="margin-bottom:20px;" class="col-xs-6 col-md-3">
+                              <div id="logo">
+                                  <!--<a href="index.html"><img src="../img/logo.png" alt="logo"></a>-->
+                                  <a href="home.html"><img style="width:300px;height: 130px;" src="../img/logo.jpg"/></a>
+                              </div>                       
+                          </div>
+                          <br>
+                          <br>
+                          <br>
+                          
+                          <div class="col-xs-12 col-md-9">
+                            <nav class="navbar navbar-default">  
+                                
+                              <div class="navbar-header">
+                                        <button type="button" style="margin-top:-100px;" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                     </div>
+                               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            
+                            
+                            
+                            <ul class="nav nav-tabs nav-tabs-responsive">
+                              <li><a href="kebaktian.html">Kebaktian</a></li>
+                              
+                              <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                Event <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                <li><a href="list_event.html">Daftar Event</a></li>
+                                <li><a href="googlecalendar.html">Google Calendar</a></li>
+                                <li><a href="daftar_diklat.html">Daftar Diklat</a></li>
+                <li><a href="pernikahan.html">Pendaftaran Pemberkatan</a></li>
+                <li><a href="daftar_dharma.html">Daftar Dharma</a></li>
+                <li><a href="berita.html">Daftar Berita</a></li>
+                                </ul>
+                              </li>
+                        
+                              <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                Sekolah Minggu <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                <li><a href="pendaftaran_sm.html">Pendaftaran</a></li>
+                                <li><a href="daftar_pengumuman_sm.html">Pengumuman</a></li>
+                                <li><a href="list_nilai.html">Nilai</a></li>
+                                </ul>
+                              </li>
+                        
+                              <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                Market <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                <li><a href="listbarang.html">Daftar Barang</a></li>
+                                <li><a href="cart.html">Cart</a></li>
+                                <li><a href="list_horder.html">Daftar Order</a></li>
+                                </ul>
+                              </li>
+                        
+                              <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                Donasi <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                <li><a href="donasi.html">Donasi Uang</a></li>
+                                <li><a href="list_donasi.html">History</a></li>
+                                </ul>
+                              </li>
+                        
+                              <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                Konsultasi <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                <li><a href="ask_chat.html">Ajukan Pertanyaan</a></li>
+                                <li><a href="list_chat.html">Daftar Konsultasi</a></li>
+                                </ul>
+                              </li>
+                        
+                              <li role="presentation" class="active">
+                                <form action="#" th:action="@{/search_dharma}" th:object="${dharma}" method="post">
+                                  <input style="margin-top: -5px;" type="month" placeholder="Search Event.." name="search" th:field="*{dharma_tanggal}">
+                                  <button type="submit" value="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </li>
+                            
+                          </ul>
+                          </div>
+                        </nav>
+                                                      
+              
+                          </div>
+                            
+                    
+                       </div>
+                    </div>
+                </div>
+          </header>
+
+
+
+            <div class="clearfix"></div>
+			<br>
+			<h2 style="text-align:center;font-family:fantasy;font-size:30pt;"><h2 style="text-align:center;font-family:fantasy;font-size:30pt;"><img style="width: 70px;height: 60px;" src="../img/biksu.jpg"/> Daftar Dharma<img style="width: 70px;height: 60px;" src="../img/biksu.jpg"/></h2>
+			<br>
+			<hr>
+			<div style="overflow-x:auto; " class="container">
+
+				<div class="row">
+					<div class="col-md-3" th:each="dharma : ${listdharmasearch}">
+						<div style="margin-bottom: 30px; height:250px; box-shadow: 5px 10px 18px #888888; background-image: url('../img/bgcard.jpg');" class="card">
+							<div style="height:90%;">
+								<br>
+								<h2 th:text="${dharma[2]}">John Doe</h2>
+								<br>
+								<p th:text="${dharma[4]}" class="title">CEO & Founder, Example</p>
+								<br>
+								<p th:text="${dharma[1]}">Harvard University</p>
+								<br>
+							</div>
+							<div class="download">
+								<a th:href="'data:application/pdf;base64,'+${dharma[3]}"><button style="background-color: grey;">Download</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+					
+			</div>
+			<!--service block--->
+           
+
+           
+           
+
+            <!----resort-overview--->
+            <section class="resort-overview-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
+                            <div class="side-A">
+                                <div class="product-thumb">
+                                    <div class="image">
+                                        <a><img src="../img/kebaktiankategori.jpg" class="img-responsive" alt="image"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-B">
+                                <div class="product-desc-side">
+                                    <h3><a href="kebaktian.html">Kebaktian</a></h3>
+                                    <p>Kebaktian Sembhayang dilakukan pagi, siang dan malam setiap hari. Dilanjutkan dengan kegiatan ceramah oleh pandita setelah sembhayang selesai.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
+                            <div class="side-A">
+                                <div class="product-thumb">
+                                    <div class="image">
+                                        <a><img alt="image" class="img-responsive" src="../img/diklatkategori.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-B">
+                                <div class="product-desc-side">
+                                    <h3><a href="list_event.html">Event & Diklat</a></h3>
+                                    <p>Perayaan event Maha Vihara dan hari besar umat Buddha serta terdapat kegiatan Diklat dengan tema yang berbeda-beda pada kurun waktu tertentu.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
+                            <div class="side-A">
+                                <div class="product-desc-side">
+                                    <h3><a href="pernikahan.html">Pemberkatan Pernikahan</a></h3>
+                                    <p>Terdapat kegiatan Pemberkatan Pernikahan bagi pasangan yang ingin melakukan pemberkatan di Maha Vihara dan Pusdiklat Buddha Maitreya</p>
+                                   
+                                </div>
+                            </div>
+
+                            <div class="side-B">
+                                <div class="product-thumb">
+                                    <div class="image txt-rgt">
+                                        <a class="arrow-left"><img src="../img/pernikahankategori.jpg" class="img-responsive" alt="imaga"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
+                            <div class="side-A">
+                                <div class="product-desc-side">
+                                    <h3><a href="daftar_pengumuman_sm.html">Sekolah Minggu</a></h3>
+                                    <p>Terdapat kegiatan sekolah minggu tiap minggunya untuk anak-anak agar mendapat ajaran etika, dharma dan bakti puja.</p>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="side-B">
+                                <div class="product-thumb txt-rgt">
+                                    <div class="image">
+                                        <a class="arrow-left"><img src="../img/smkategori.jpg" class="img-responsive" alt="imaga"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!---footer--->
+            <footer>
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-3 col-sm-6 col-xs-12 width-set-50">
+                          <div class="footer-details">
+                              <h4>Find Us</h4>
+                              <ul class="list-unstyled footer-contact-list">
+                                  <li>
+                                      <i class="fa fa-map-marker fa-lg"></i>
+                                      <p>Dukuh Kupang Utara 1 No 2-4, RT 006, RW 001, Kel.Dukuh Kupang, Dukuhpakis, Surabaya</p>
+                                  </li>
+                                  <li>
+                                      <i class="fa fa-phone fa-lg"></i>
+                                      <p><a href="tel:+1-202-555-0100">0315618700</a></p>
+                                  </li>
+                                 
+                              </ul>
+                              <div class="footer-social-icon">
+                                  <a href="https://web.facebook.com/Milewenhuaban/"><i class="fa fa-facebook"></i></a>                     
+                                  <a href="https://www.instagram.com/explore/locations/1027361491/vihara-dan-pusdiklat-buddha-maitreya-surabaya/"><i class="fa fa-instagram"></i></a>
+                                  <a href="https://api.whatsapp.com/send?phone=089688328740"><i class="fa fa-whatsapp"></i></a>
+                         
+                              </div>
+                              
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 col-xs-12 width-50 width-set-50">
+                          <div class="footer-details">
+                              <h4>explore</h4>
+                              <ul class="list-unstyled footer-links">
+                                  <li><a href="home.html">Home</a></li>
+                                  <li><a href="kebaktian.html">Jadwal Kebaktian</a></li>
+                                  <li><a href="daftar_pengumuman_sm.html">Sekolah Minggu</a></li>
+                                  <li><a href="listbarang.html">Market</a></li>
+                                  <li><a href="ask_chat.html">Konsultasi</a></li>
+                                  
+                                  
+                           
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 col-xs-12 width-50 width-set-50">
+                          <div class="footer-details">
+                              <h4>Event</h4>
+                              <ul class="list-unstyled footer-links">
+                                  
+                                  <li><a href="list_event.html">Event</a></li>
+                                  <li><a href="daftar_diklat.html">Diklat</a></li>
+                                  <li><a href="daftar_dharma.html">Dharma</a></li>
+                                  <li><a href="listberita.html">Berita</a></li>
+                                  
+                           
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6 col-xs-12 width-50 width-set-50">
+                          <div class="footer-details">
+                              <h4>Location</h4>
+                              <ul class="list-unstyled footer-links">
+                                  
+                                  <iframe class="col-lg-12 col-md-12 col-sm-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.690730925266!2d112.70831481423782!3d-7.275988394748236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fc06604e92c9%3A0xa991242e3eebd388!2sMaha%20Vihara%20dan%20Pusdiklat%20Buddha%20Maitreya!5e0!3m2!1sid!2sid!4v1587996663482!5m2!1sid!2sid" width="600" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                              </ul>
+                          </div>
+                      </div>
+                      
+                  </div>
+
+                  <div class="copyright">
+                      &copy; 2021 All right reserved Maha Vihara dan Pusdiklat Buddha Maitreya.</a>
+                  </div>
+
+              </div>
+          </footer>
+            <!--back to top--->
+            <a style="display: none;" href="javascript:void(0);" class="scrollTop back-to-top" id="back-to-top">
+                <span><i aria-hidden="true" class="fa fa-angle-up fa-lg"></i></span>
+                <span>Top</span>
+            </a>
+
+        </div>
+		 <script src="js/datatables/jquery.dataTables.min.js"></script>
+		  <script src="js/datatables/dataTables.bootstrap4.min.js"></script>
+		 
+		  <!-- Page level custom scripts -->
+		  <script src="js/demo/datatables-demo.js"></script>
+		   <script>
+			function myFunction() {
+			  var x = document.getElementById("myTopnav");
+			  if (x.className === "topnav") {
+				x.className += " responsive";
+			  } else {
+				x.className = "topnav";
+			  }
+			}
+			</script>
+    </body>
+</html>

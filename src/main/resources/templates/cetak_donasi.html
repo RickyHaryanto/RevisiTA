@@ -1,0 +1,95 @@
+<html>
+<head>
+	<title>Maha Vihara</title>
+</head>
+<style>
+.textfont{
+	font-family: "Roboto";
+}
+td{
+	font-size:11pt;
+}
+
+.judul{
+	font-weight:550;
+}
+.textproduk{
+	font-size:10pt;
+}
+
+</style>
+<body class="textfont">
+<div style="padding: 20px 20px 20px 20px; width:400px; border-style: solid; border-width: 1px;">
+
+		
+		<img style="width:400px" src="../img/pos.png">
+		
+		<hr style="margin-top:20px;" >
+		<small>
+		<h3 style="margin-bottom:-10px; font-weight:550; text-align: center;" >Laporan Donasi Barang</h3>
+		<br>
+		</small>
+		<hr>
+        <h4 style="margin-bottom:8px; font-weight:550;">Detail laporan:</h4>
+        <hr>
+		<table class="table" th:each="donasi : ${listdonasi2}">
+			<thead class="judul text-white bg-warning">
+				<tr>
+					<td colspan=3>Atas Nama Donasi</td>
+				</tr>
+			</thead>
+				<tr>
+					<td>-</td>
+                    <td style="width:100%" th:text="${donasi.donasi_atasnama}"></td>
+				</tr>
+				<tr><td></td></tr>
+			<thead class="judul text-white bg-warning">
+				<tr>
+					<td colspan=3 >Tanggal Donasi:</td>
+				</tr>
+			</thead>
+				<tr>
+					<td>-</td>
+					<td style="width:100%" th:text="${donasi.donasi_tanggal}"></td>
+				</tr>
+				<tr><td></td></tr>
+			<thead class=" judul text-white bg-warning">
+				<tr>
+					<td colspan=3>Nama Barang:</td>
+				</tr>
+			</thead>
+				<tr>
+					<td>-</td>
+					<td style="width:100%" th:text="${donasi.donasi_namabarang}"></td>
+				</tr>
+                <tr><td></td></tr>
+				<thead class=" judul text-white bg-warning">
+                    <tr>
+                        <td colspan=3>Jumlah Total:</td>
+                    </tr>
+                </thead>
+                    <tr>
+                        <td>-</td>
+                        <td style="width:100%" th:text="${donasi.donasi_jumlahtotal}">10 pcs</td>
+                    </tr>
+                    <tr><td></td></tr>
+                <thead class=" judul text-white bg-warning">
+                    <tr>
+                        <td colspan=3>Keterangan:</td>
+                    </tr>
+               </thead>
+                    <tr>
+                        <td>-</td>
+                        <td style="width:100%" th:text="${donasi.donasi_keterangan}">10 pcs</td>
+                    </tr>
+                    <tr><td></td></tr>
+		</table>
+		
+		<br>
+		<hr>
+		<p style="margin-bottom:-7px; text-align:center;" >Maha Vihara dan Pusdiklat Surabaya</p>
+		
+</div>
+<a href="javascript:window.print()"> <i class="far fa-file-alt"></i> Print to PDF</a>
+</body>
+</html>

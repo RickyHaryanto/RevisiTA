@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../img/icons/favicon.png"/>
+        <title>Maha Vihara</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="fonts/antonio-exotic/stylesheet.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/lightbox.min.css">
+        <link href="css/responsive.css" rel="stylesheet">
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/lightbox-plus-jquery.min.js" type="text/javascript"></script>
+        <script src="js/instafeed.min.js" type="text/javascript"></script>
+        <script src="js/custom.js" type="text/javascript"></script>
+		
+		
+    <style>
+			h3.a{
+			  visibility: hidden;
+			}
+			input.b{
+			  visibility: hidden;
+			}
+			table {
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+
+		th, td {
+		  text-align: left;
+		  padding: 8px;
+		}
+
+		tr:nth-child(even){background-color: #f2f2f2}
+
+		th {
+		  background-color: #04AA6D;
+		  color: white;
+		}
+		
+		input[type=email], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+		input[type=text], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+		input[type=date], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+
+		input[type=password], select {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+		}
+
+		input[type=submit] {
+		  width: 100%;
+		  background-color: #4CAF50;
+		  color: white;
+		  padding: 14px 20px;
+		  margin: 8px 0;
+		  border: none;
+		  border-radius: 4px;
+		  cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+		  background-color: #45a049;
+		}
+	
+
+		</style>
+    </head>
+    <body>
+        <div id="page">
+            <!---header top---->
+            <div class="top-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <div class="social-grid">
+                                <ul class="list-unstyled text-right">
+                               	
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--header--->
+           
+
+            <!--end-->
+           
+			
+            <div class="clearfix"></div>
+			<br>
+			<div th:if="${param.success}">
+                <div class="alert alert-info">Pendaftaran Berhasil, Tunggu Persetujuan Admin</div>
+              </div>
+              <div th:if="${param.errorpass}">
+                <div class="alert alert-info">Password Tidak Sama</div>
+              </div>
+              <div th:if="${param.erroremail}">
+                <div class="alert alert-info">Email Sudah Terdaftar</div>
+              </div>
+			  
+			<br>
+			<h2 style="text-align:center;font-family:fantasy;font-size:30pt;"><h2 style="text-align:center;font-family:fantasy;font-size:30pt;"><img style="width: 70px;height: 60px;" src="../img/biksu.jpg"/>Create Account<img style="width: 70px;height: 60px;" src="../img/biksu.jpg"/></h2>
+			<br>
+			<hr>
+			<div class="container">
+			<form class="user" th:action="@{/registrationUpload}" th:object="${user}" method="post" enctype="multipart/form-data">
+				
+				<div th:classappend="${#fields.hasErrors('nama')}? 'has-error':''">
+				<label for="fname">Nama Lengkap:</label>
+				<input type="text" id="nama" th:field="*{nama}">
+					<p class="error-message"
+							th:each="error: ${#fields.errors('nama')}"
+							th:text="${error}">Validation error
+					</p>
+				</div>
+				
+				
+				<div th:classappend="${#fields.hasErrors('bod')}? 'has-error':''">
+				<label for="fname">Tanggal Lahir:</label>
+				<input type="date" id="bod" th:field="*{bod}">
+					<p class="error-message"
+							th:each="error: ${#fields.errors('bod')}"
+							th:text="${error}">Validation error
+					</p>
+				</div>
+					
+				
+				<div th:classappend="${#fields.hasErrors('alamat')}? 'has-error':''">
+				<label for="fname">Alamat:</label>
+				<input type="text" id="alamat" th:field="*{alamat}">
+					<p class="error-message"
+							th:each="error: ${#fields.errors('alamat')}"
+							th:text="${error}">Validation error
+					</p>
+				</div>
+				
+				
+				
+				<div th:classappend="${#fields.hasErrors('kota')}? 'has-error':''">
+				<label for="fname">Kota:</label>
+				<input type="text" id="kota" th:field="*{kota}">
+					<p class="error-message"
+							th:each="error: ${#fields.errors('kota')}"
+							th:text="${error}">Validation error
+					</p>
+				</div>
+				
+				
+				
+				<div th:classappend="${#fields.hasErrors('email')}? 'has-error':''">
+				<label for="fname">Email:</label>
+				<input type="email" id="email" th:field="*{email}">
+					<p class="error-message"
+							th:each="error: ${#fields.errors('email')}"
+							th:text="${error}">Validation error
+					</p>
+				</div>
+				
+				<div th:classappend="${#fields.hasErrors('qiudao')}? 'has-error':''">
+				<label for="fname">Tanggal QiuDao:</label>
+				<input type="date" id="qiudao" th:field="*{qiudao}">
+					<p class="error-message"
+							th:each="error: ${#fields.errors('qiudao')}"
+							th:text="${error}">Validation error
+					</p>
+				</div>
+				
+				<div th:classappend="${#fields.hasErrors('password')}? 'has-error':''">
+				<label for="fname">Password:</label>
+				<input type="password" id="password" th:field="*{password}">
+					<p class="error-message"
+							th:each="error: ${#fields.errors('password')}"
+							th:text="${error}">Validation error
+					</p>
+				</div>
+				
+				<div th:classappend="${#fields.hasErrors('confirmPassword')}? 'has-error':''">
+				<label for="fname">Confirm Password:</label>
+				<input type="password" id="confirmPassword" th:field="*{confirmPassword}">
+					<p class="error-message"
+							th:each="error: ${#fields.errors('confirmPassword')}"
+							th:text="${error}">Validation error
+					</p>
+				</div>
+				
+				<div th:classappend="${#fields.hasErrors('jabatan')}? 'has-error':''">
+				<label for="fname">Status:</label>
+				<select id="jabatan" name="jabatan">
+				  <option value="Umat">Umat</option>
+				 
+				  
+				</select>
+				</div>
+				
+				<input type="submit" value="Submit">
+			</form>
+			</div>
+			<br>
+			 <div class="text-center">
+                <a class="small" href="/index.html">Already have an account? Go back!</a>
+              </div>
+            <!--service block--->
+            
+
+            <!----resort-overview--->
+            <section class="resort-overview-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
+                            <div class="side-A">
+                                <div class="product-thumb">
+                                    <div class="image">
+                                        <a><img src="../img/kebaktiankategori.jpg" class="img-responsive" alt="image"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-B">
+                                <div class="product-desc-side">
+                                    <h3><a>Kebaktian</a></h3>
+                                    <p>Kebaktian Sembhayang dilakukan pagi, siang dan malam setiap hari. Dilanjutkan dengan kegiatan ceramah oleh pandita setelah sembhayang selesai.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
+                            <div class="side-A">
+                                <div class="product-thumb">
+                                    <div class="image">
+                                        <a><img alt="image" class="img-responsive" src="../img/diklatkategori.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-B">
+                                <div class="product-desc-side">
+                                    <h3><a>Event & Diklat</a></h3>
+                                    <p>Perayaan event Maha Vihara dan hari besar umat Buddha serta terdapat kegiatan Diklat dengan tema yang berbeda-beda pada kurun waktu tertentu.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
+                            <div class="side-A">
+                                <div class="product-desc-side">
+                                    <h3><a>Pemberkatan Pernikahan</a></h3>
+                                    <p>Terdapat kegiatan Pemberkatan Pernikahan bagi pasangan yang ingin melakukan pemberkatan di Maha Vihara dan Pusdiklat Buddha Maitreya</p>
+                                   
+                                </div>
+                            </div>
+
+                            <div class="side-B">
+                                <div class="product-thumb">
+                                    <div class="image txt-rgt">
+                                        <a class="arrow-left"><img src="../img/pernikahankategori.jpg" class="img-responsive" alt="imaga"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
+                            <div class="side-A">
+                                <div class="product-desc-side">
+                                    <h3><a>Sekolah Minggu</a></h3>
+                                    <p>Terdapat kegiatan sekolah minggu tiap minggunya untuk anak-anak agar mendapat ajaran etika, dharma dan bakti puja.</p>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="side-B">
+                                <div class="product-thumb txt-rgt">
+                                    <div class="image">
+                                        <a class="arrow-left"><img src="../img/smkategori.jpg" class="img-responsive" alt="imaga"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-----blog slider----->
+            <!--blog trainer block-->
+            <section class="blog-block-slider">
+                <div class="blog-block-slider-fix-image">
+                    <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+                        <div class="container">
+                            <!-- Wrapper for slides -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel2" data-slide-to="1"></li>
+                                <li data-target="#myCarousel2" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <div class="blog-box">
+                                        <p>Memancarkan Cinta tanpa batas ke seluruh dunia tanpa hambatan, tanpa niat buruk, tanpa permusuhan.</p>
+                                    </div>
+                                    <div class="blog-view-box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="../img/iconbuddha.png" class="media-object">
+                                            </div>
+                                            <div class="media-body">
+                                               
+                                                <h5 class="blog-rev">Kata-kata bijak sang Budha</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="blog-box">
+                                        <p>Kemarahan tidak akan pernah hilang selama pikiran kebencian dihargai dalam pikiran. Kemarahan akan lenyap begitu pikiran dendam dilupakan.</p>
+                                    </div>
+                                    <div class="blog-view-box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="../img/iconbuddha.png" class="media-object">
+                                            </div>
+                                            <div class="media-body">
+                                                
+                                                <h5 class="blog-rev">Kata-kata bijak sang Budha</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="blog-box">
+                                        <p>Seperti halnya seorang ibu yang akan melindungi anak tunggalnya dengan nyawanya, biarpun demikian, seseorang akan menumbuhkan cinta tanpa batas terhadap semua makhluk.</p>
+                                    </div>
+                                    <div class="blog-view-box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="../img/iconbuddha.png" class="media-object">
+                                            </div>
+                                            <div class="media-body">
+                                               
+                                                <h5 class="blog-rev">Kata-kata bijak sang Budha</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </section>
+
+           
+
+            <!---footer--->
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12 width-set-50">
+                            <div class="footer-details">
+                                <h4>Find Us</h4>
+                                <ul class="list-unstyled footer-contact-list">
+                                    <li>
+                                        <i class="fa fa-map-marker fa-lg"></i>
+                                        <p>Dukuh Kupang Utara 1 No 2-4, RT 006, RW 001, Kel.Dukuh Kupang, Dukuhpakis, Surabaya</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-phone fa-lg"></i>
+                                        <p><a href="tel:+1-202-555-0100">0315618700</a></p>
+                                    </li>
+                                   
+                                </ul>
+                                <div class="footer-social-icon">
+                                    <a href="https://web.facebook.com/Milewenhuaban/"><i class="fa fa-facebook"></i></a>                     
+                                    <a href="https://www.instagram.com/explore/locations/1027361491/vihara-dan-pusdiklat-buddha-maitreya-surabaya/"><i class="fa fa-instagram"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=089688328740"><i class="fa fa-whatsapp"></i></a>
+                           
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 width-50 width-set-50">
+                            <div class="footer-details">
+                                <h4>explore</h4>
+                                <ul class="list-unstyled footer-links">
+                                    <li><a href="home.html">Home</a></li>
+                                    <li><a href="kebaktian.html">Jadwal Kebaktian</a></li>
+                                    <li><a href="daftar_pengumuman_sm.html">Sekolah Minggu</a></li>
+                                    <li><a href="listbarang.html">Market</a></li>
+                                    <li><a href="ask_chat.html">Konsultasi</a></li>
+                                    
+                                    
+                             
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 width-50 width-set-50">
+                            <div class="footer-details">
+                                <h4>Event</h4>
+                                <ul class="list-unstyled footer-links">
+                                    
+                                    <li><a href="list_event.html">Event</a></li>
+                                    <li><a href="daftar_diklat.html">Diklat</a></li>
+                                    <li><a href="daftar_dharma.html">Dharma</a></li>
+                                    <li><a href="listberita.html">Berita</a></li>
+                                    
+                             
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 width-50 width-set-50">
+                            <div class="footer-details">
+                                <h4>Location</h4>
+                                <ul class="list-unstyled footer-links">
+                                    
+                                    <iframe class="col-lg-12 col-md-12 col-sm-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.690730925266!2d112.70831481423782!3d-7.275988394748236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fc06604e92c9%3A0xa991242e3eebd388!2sMaha%20Vihara%20dan%20Pusdiklat%20Buddha%20Maitreya!5e0!3m2!1sid!2sid!4v1587996663482!5m2!1sid!2sid" width="600" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="copyright">
+                        &copy; 2021 All right reserved Maha Vihara dan Pusdiklat Buddha Maitreya.</a>
+                    </div>
+
+                </div>
+            </footer>
+
+            <!--back to top--->
+            <a style="display: none;" href="javascript:void(0);" class="scrollTop back-to-top" id="back-to-top">
+                <span><i aria-hidden="true" class="fa fa-angle-up fa-lg"></i></span>
+                <span>Top</span>
+            </a>
+
+        </div>
+		
+
+
+    </body>
+</html>

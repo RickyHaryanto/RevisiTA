@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>Maha Vihara</title>
+</head>
+<style>
+.textfont{
+	font-family: "Roboto";
+}
+td{
+	font-size:11pt;
+}
+
+.judul{
+	font-weight:550;
+}
+.textproduk{
+	font-size:10pt;
+}
+table, th, td {
+  border:1px solid black;
+  text-align: center;
+}
+
+
+</style>
+<body class="textfont">
+<div style="padding: 20px 20px 20px 20px; width:600px; border-style: solid; border-width: 1px;">
+
+		
+		<img style="width:600px" src="../img/pos.png">
+		
+		<hr style="margin-top:20px;" >
+		<small>
+		<h3 style="margin-bottom:-10px; font-weight:550; text-align: center;" >Invoice Pembelian</h3>
+		<br>
+		</small>
+		<hr>
+        <div th:each="horderh : ${listprintinvheader}">
+            <p style="margin-bottom: -10px;" th:text="'Atas Nama:' + ${horderh[0]}"></p>
+            <p th:text="'Tanggal Pembelian :' + ${horderh[1]}"></p>
+        </div>
+        <hr>
+        <table style="width:100%">
+              <tr>
+                <th>Nama Barang</th>
+                <th>Jumlah</th>
+                <th>Harga</th>
+                <th>Subtotal</th>
+                
+              </tr>
+            <tbody>
+              <tr th:each="horder : ${listprintinv}" >
+                <td th:text="${horder[0]}">Keju</td>
+                <td th:text="${horder[1]}" >2</td>
+                <td th:text="${horder[2]}">10000</td>
+                <td th:text="${horder[3]}">20000</td>
+             </tr>
+            </tbody>
+        </table>
+        <hr>
+        <div th:each="horderh : ${listprintinvheader}">
+            <p style="font-weight: bold;margin-left: 420px;" th:text="'Total Belanja: Rp. ' + ${horderh[2]}"></p>
+            
+        </div>
+        
+
+
+        <br>
+		<hr>
+		<p style="margin-bottom:-7px; text-align:center;" >Maha Vihara dan Pusdiklat Buddha Maitreya Surabaya</p>
+		
+</div>
+<a href="javascript:window.print()"> <i class="far fa-file-alt"></i> Print to PDF</a>
+</body>
+</html>

@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../img/icons/favicon.png"/>
+        <title>Maha Vihara</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="fonts/antonio-exotic/stylesheet.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/lightbox.min.css">
+        <link href="css/responsive.css" rel="stylesheet">
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/lightbox-plus-jquery.min.js" type="text/javascript"></script>
+        <script src="js/instafeed.min.js" type="text/javascript"></script>
+        <script src="js/custom.js" type="text/javascript"></script>
+        <style>
+            .nav li a{
+        font-size: large;
+        margin-right: 60px;
+    }
+    @media (max-width: 600px) {
+        .nav-tabs {
+         min-width: 100%;
+         display: inline-grid;
+        }
+     
+    }
+        </style>
+    </head>
+    <body>
+        <div id="page">
+            <!---header top---->
+            <div class="top-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="social-grid">
+                                <ul class="list-unstyled text-left">
+                                    <li><a>Pesan :</a></li>
+                                    <li role="presentation" class="dropdown">
+                                        <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                          <i class="fa fa-envelope-o"></i>
+                                          <span class="badge bg-green" id="call">1</span>
+                                        </a>
+                                        <ul style="width:300px;" class="dropdown-menu list-unstyled msg_list" role="menu">
+                                            <li>
+                                                <div class="text-center">
+                                                  
+                                                  <a>
+                                                    <p style="color: black; font-size: large;margin-top: 7px;font-weight: bold;">Pesan</p>
+                                                    
+                                                  </a>
+                                                
+                                                </div>
+                                            </li>
+                                            <hr>
+                                            <li >
+                                                <div id="template" style="display:none">
+                                                    <p style="color: black;margin-left: 7px;margin-bottom: -35px;margin-top: -5px;" class="message">
+                                                    xContent
+                                                    </p>
+                                                    <br><hr>
+                                                </div>
+                                            </li>
+                                            <div  id="containerNotif">
+                  
+                                            </div>
+                                           
+                                         
+                                         
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="social-grid">
+                                <ul class="list-unstyled text-right">
+                                   	<li><a>Admin Market</a></li>
+									<li><a href="logout.html">Logout</a></li>
+									<p></p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--header--->
+            <header class="header-container">
+                <div class="container-fluid">
+                    <div class="top-row">
+                        <div class="row">
+                            <div style="margin-bottom:20px;" class="col-xs-6 col-md-4">
+                                <div id="logo">
+                                    <!--<a href="index.html"><img src="../img/logo.png" alt="logo"></a>-->
+                                    <a href="/adminindex_market.html"><img style="width:350px;height: 130px;" src="../img/logo.jpg"/></a>
+                                </div>                       
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            
+
+                        <div class="col-xs-12 col-md-8">
+                            <nav class="navbar navbar-default">  
+                                
+                            <div class="navbar-header">
+                                    <button type="button" style="margin-top:-100px;" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                      <span class="sr-only">Toggle navigation</span>
+                                      <span class="icon-bar"></span>
+                                      <span class="icon-bar"></span>
+                                      <span class="icon-bar"></span>
+                                    </button>
+
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+                              <ul class="nav nav-tabs nav-tabs-responsive">
+                                <li><a href="/adminadd_product_market.html">Tambah Barang</a></li>
+                                <li><a href="/adminlistbarang.html">Daftar Barang</a></li>
+                                <li><a href="/adminlist_horder.html">Daftar Order</a></li>
+                                <li><a href="/admininput_laporan.html">Laporan</a></li>
+                                
+                                </ul>
+                            </div>
+                            </nav>
+                        </div>
+                       
+                      
+                         </div>
+                      </div>
+                  </div>
+            </header>
+            <!--end-->
+			<div class="container-fluid">
+            <div id="myCarousel1" class="carousel slide" data-ride="carousel"> 
+                <!-- Indicators -->
+
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel1" data-slide-to="1"></li>
+                    <li data-target="#myCarousel1" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active"> <img src="../img/banner11.jpg" style="width:100%; height: 700px" alt="First slide">
+                        <div class="carousel-caption">
+                            <h1 style="color:black;">Maha Vihara & <br> Pusdiklat Buddha Maitreya</h1>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="../img/banner22.jpg" style="width:100%; height: 700px" alt="Second slide">
+                        <div class="carousel-caption">
+                            <h1>Maha Vihara & <br> Pusdiklat Buddha Maitreya</h1>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="../img/banner33.jpg" style="width:100%; height: 700px" alt="Third slide">
+                        <div class="carousel-caption">
+                            <h1>Maha Vihara & <br> Pusdiklat Buddha Maitreya</h1>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="left carousel-control" href="#myCarousel1" data-slide="prev"> <img src="../img/icons/left-arrow.png" onmouseover="this.src = '../img/icons/left-arrow-hover.png'" onmouseout="this.src = '../img/icons/left-arrow.png'" alt="left"></a>
+                <a class="right carousel-control" href="#myCarousel1" data-slide="next"><img src="../img/icons/right-arrow.png" onmouseover="this.src = '../img/icons/right-arrow-hover.png'" onmouseout="this.src = '../img/icons/right-arrow.png'" alt="left"></a>
+
+            </div>
+			</div>
+            <div class="clearfix"></div>
+
+            <!--service block--->
+            <section class="service-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-6 width-50">
+                            <div class="service-details text-center">
+                                <div class="service-image">
+                                    <img alt="image" class="img-responsive" src="../img/icons/kebaktian1.png">
+                                </div>
+                                <h4><a>Kebaktian</a></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6 width-50">
+                            <div class="service-details text-center">
+                                <div class="service-image">
+                                    <img alt="image" class="img-responsive" src="../img/icons/event.png">
+                                </div>
+                                <h4><a>Event & Diklat</a></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6 mt-25">
+                            <div class="service-details text-center">
+                                <div class="service-image">
+                                    <img alt="image" class="img-responsive" src="../img/icons/nikah.png">
+                                </div>
+                                <h4><a>Pemberkatan</a></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-6 mt-25">
+                            <div class="service-details text-center">
+                                <div class="service-image">
+                                    <img alt="image" style="width:110px; height:100px;" class="img-responsive" src="../img/icons/sm.png">
+                                </div>
+                                <h4><a>Sekolah Minggu</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           
+           
+
+            <!----resort-overview--->
+            <section class="resort-overview-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
+                            <div class="side-A">
+                                <div class="product-thumb">
+                                    <div class="image">
+                                        <a><img src="../img/kebaktiankategori.jpg" class="img-responsive" alt="image"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-B">
+                                <div class="product-desc-side">
+                                    <h3><a>Kebaktian</a></h3>
+                                    <p>Kebaktian Sembhayang dilakukan pagi, siang dan malam setiap hari. Dilanjutkan dengan kegiatan ceramah oleh pandita setelah sembhayang selesai.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
+                            <div class="side-A">
+                                <div class="product-thumb">
+                                    <div class="image">
+                                        <a><img alt="image" class="img-responsive" src="../img/diklatkategori.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-B">
+                                <div class="product-desc-side">
+                                    <h3><a>Event & Diklat</a></h3>
+                                    <p>Perayaan event Maha Vihara dan hari besar umat Buddha serta terdapat kegiatan Diklat dengan tema yang berbeda-beda pada kurun waktu tertentu.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-right">
+                            <div class="side-A">
+                                <div class="product-desc-side">
+                                    <h3><a>Pemberkatan Pernikahan</a></h3>
+                                    <p>Terdapat kegiatan Pemberkatan Pernikahan bagi pasangan yang ingin melakukan pemberkatan di Maha Vihara dan Pusdiklat Buddha Maitreya</p>
+                                   
+                                </div>
+                            </div>
+
+                            <div class="side-B">
+                                <div class="product-thumb">
+                                    <div class="image txt-rgt">
+                                        <a class="arrow-left"><img src="../img/pernikahankategori.jpg" class="img-responsive" alt="imaga"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 remove-padd-left">
+                            <div class="side-A">
+                                <div class="product-desc-side">
+                                    <h3><a>Sekolah Minggu</a></h3>
+                                    <p>Terdapat kegiatan sekolah minggu tiap minggunya untuk anak-anak agar mendapat ajaran etika, dharma dan bakti puja.</p>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="side-B">
+                                <div class="product-thumb txt-rgt">
+                                    <div class="image">
+                                        <a class="arrow-left"><img src="../img/smkategori.jpg" class="img-responsive" alt="imaga"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-----blog slider----->
+            <!--blog trainer block-->
+            <section class="blog-block-slider">
+                <div class="blog-block-slider-fix-image">
+                    <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+                        <div class="container">
+                            <!-- Wrapper for slides -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel2" data-slide-to="1"></li>
+                                <li data-target="#myCarousel2" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <div class="blog-box">
+                                        <p>Memancarkan Cinta tanpa batas ke seluruh dunia tanpa hambatan, tanpa niat buruk, tanpa permusuhan.</p>
+                                    </div>
+                                    <div class="blog-view-box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="../img/iconbuddha.png" class="media-object">
+                                            </div>
+                                            <div class="media-body">
+                                               
+                                                <h5 class="blog-rev">Kata-kata bijak sang Budha</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="blog-box">
+                                        <p>Kemarahan tidak akan pernah hilang selama pikiran kebencian dihargai dalam pikiran. Kemarahan akan lenyap begitu pikiran dendam dilupakan.</p>
+                                    </div>
+                                    <div class="blog-view-box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="../img/iconbuddha.png" class="media-object">
+                                            </div>
+                                            <div class="media-body">
+                                                
+                                                <h5 class="blog-rev">Kata-kata bijak sang Budha</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="blog-box">
+                                        <p>Seperti halnya seorang ibu yang akan melindungi anak tunggalnya dengan nyawanya, biarpun demikian, seseorang akan menumbuhkan cinta tanpa batas terhadap semua makhluk.</p>
+                                    </div>
+                                    <div class="blog-view-box">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="../img/iconbuddha.png" class="media-object">
+                                            </div>
+                                            <div class="media-body">
+                                               
+                                                <h5 class="blog-rev">Kata-kata bijak sang Budha</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </section>
+
+           
+
+            <!---footer--->
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12 width-set-50">
+                            <div class="footer-details">
+                                <h4>Find Us</h4>
+                                <ul class="list-unstyled footer-contact-list">
+                                    <li>
+                                        <i class="fa fa-map-marker fa-lg"></i>
+                                        <p>Dukuh Kupang Utara 1 No 2-4, RT 006, RW 001, Kel.Dukuh Kupang, Dukuhpakis, Surabaya</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-phone fa-lg"></i>
+                                        <p><a href="tel:+1-202-555-0100">0315618700</a></p>
+                                    </li>
+                                   
+                                </ul>
+                                <div class="footer-social-icon">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>                     
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                       
+                        
+                    </div>
+
+                    <div class="copyright">
+                        &copy; 2021 All right reserved.</a>
+                    </div>
+
+                </div>
+            </footer>
+
+            <!--back to top--->
+            <a style="display: none;" href="javascript:void(0);" class="scrollTop back-to-top" id="back-to-top">
+                <span><i aria-hidden="true" class="fa fa-angle-up fa-lg"></i></span>
+                <span>Top</span>
+            </a>
+
+        </div>
+        <script>
+            function checkAjax()
+            {
+              $.ajax({
+                    type: "GET",
+                    url: "https://springboot-testtamahavihara.herokuapp.com/serviceadminmarket",
+                    dataType:"json",
+                    success : function(data){
+                      //console.log(data);
+                      $("#call").html(data.length+"");
+                      $("#containerNotif").html("");
+                      for (var i=0;i<data.length;i++)
+                      {
+                        var detail=data[i];
+                        console.log(detail);
+        
+                        var template=$("#template").html();
+                        template=template.replace("xContent",detail[2]);
+                        template=template.replace("xJudul",detail[3]);
+                        $("#containerNotif").append(template);
+                      }
+        
+                    }
+                });
+            }
+        
+            var myVar = setInterval(function()
+            {checkAjax();}, 5000);
+        
+          </script>
+    </body>
+</html>
